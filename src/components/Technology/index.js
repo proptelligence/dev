@@ -4,6 +4,7 @@ import './index.css';
 
 const Technology = () => {
 
+
   return (
     <>
       <Navbar />
@@ -25,16 +26,15 @@ const Technology = () => {
                   <h2 >Artificial Intelligence</h2>
                   <div classNmae="animated-list-container">
                   
-                  <ul>
-                   <li className='list-item'> Property Valuation and Predictive Analytics</li>
-                    <li className='list-item'>Automated Property Management</li>
-                    <li className='list-item'>Personalized Property Recommendations:</li>
-                    <li className='list-item'>Risk Management and Fraud Detection</li>
-                    <li className='list-item'>Market Analysis and Investment Strategies</li> 
-                    <li className='list-item'>Legal and Compliance Automation</li>
-                    <li className='list-item'>Data Visualization and Analytics</li> 
-                
-                  </ul>
+                  <ul className='cont-101'>
+                      <li className='list-item'>Property Valuation and Predictive Analytics</li>
+                      <li className='list-item'>Automated Property Management</li>
+                      <li className='list-item'>Personalized Property Recommendations</li>
+                      <li className='list-item'>Risk Management and Fraud Detection</li>
+                      <li className='list-item'>Market Analysis and Investment Strategies</li>
+                      <li className='list-item'>Legal and Compliance Automation</li>
+                      <li className='list-item'>Data Visualization and Analytics</li>
+               </ul>
                   </div>
                 </div>
       
@@ -52,7 +52,7 @@ const Technology = () => {
                   <h2>AR & VR</h2>
                   <div classNmae="animated-list-container">
                   
-                  <ul>
+                  <ul  className='cont-101'>
                   <li className='list-item'> Virtual Property Tours</li>
                     <li className='list-item'>Property Visualization and Design</li>
                     <li className='list-item'>Interactive Property Marketing</li>
@@ -77,7 +77,7 @@ const Technology = () => {
             <div className="centered-content">
             <h2>Internet of Things (IoT)</h2>
                   <div>
-                 <ul>
+                 <ul  className='cont-101'>
                  <li  className='list-item'>Smart Building Management</li>
                     <li className='list-item'>Security and Access Control</li>
                     <li className='list-item'>Energy Efficiency</li>

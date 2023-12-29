@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
-import { FaShoppingCart, FaHandshake } from 'react-icons/fa';
+import { FaShoppingCart, FaHandshake } from 'react-icons/fa'; 
 
 const RenderServices = ({ selectedOption }) => {
   const [showSellOptions, setShowSellOptions] = useState(false);

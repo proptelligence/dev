@@ -142,20 +142,10 @@
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
     background-color: #f0f0f0;
-    color: #333;
-    transition: background-color 0.3s ease;
+    
   }
   
-  .category-options button:hover {
-    background-color: #e0e0e0;
-  }
-  
-  .category-options button.active {
-    background-color: #66ccff;
-    color: #fff;
-  }
 
 .budget-filters {
   margin-top: 20px;
@@ -205,3 +195,20 @@
   background-color: #e0e0e0;
 }
 
+
+
+.category-options {
+  display: flex;
+}
+
+.category-button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  
+}
+
+.category-button.selected {
+  background-color: #0056b3; 
+  color: #e0e0e0;
+}

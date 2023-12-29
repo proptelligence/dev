@@ -1,6 +1,6 @@
 {
   "name": "prop-website",
-  "homepage":"http://proptelligence.net",
+  "homepage": "http://proptelligence.net",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

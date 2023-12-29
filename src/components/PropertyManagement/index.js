@@ -69,9 +69,19 @@ const PropertyManagement = () => {
           <button onClick={handleBack}>Back to Cities</button>
           <h3>Categories for {selectedCity}</h3>
           <div className="category-options">
-            <button onClick={() => handleOptionChange('Residential')}>Residential</button>
-            <button onClick={() => handleOptionChange('Commercial')}>Commercial</button>
-          </div>
+          <button
+            onClick={() => handleOptionChange('Residential')}
+            className={`category-button ${selectedOption === 'Residential' ? 'selected' : ''}`}
+          >
+            Residential
+          </button>
+          <button
+            onClick={() => handleOptionChange('Commercial')}
+            className={`category-button ${selectedOption === 'Commercial' ? 'selected' : ''}`}
+          >
+            Commercial
+          </button>
+        </div>
           {selectedOption && (
             <div className="budget-filters">
               <h4>Budget </h4>
