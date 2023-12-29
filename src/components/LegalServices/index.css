@@ -1,0 +1,84 @@
+/* index.css */
+.legal-services-container {
+    text-align: center;
+    padding: 25px;
+    background-color:#f5fffa;
+  }
+  
+  .services-cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .service-1 {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service-1:hover {
+    transform: scale(1.05);
+  }
+  
+  .img1 {
+    width: 245px;
+    height: 220px;
+    border-radius: 8px;
+  }
+  
+  .heading {
+    margin-top: 10px;
+    font-size: 20px;
+    color: royalblue;
+    font-family: "Open Sans","Arial","Helvetica","sans-serif";
+    font-weight: 600;
+  }
+  
+  /* Optional: Animation for Title */
+  .heading::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #333;
+    transition: width 0.3s;
+  }
+  
+  .heading:hover::after {
+    width: 100%;
+  }
+  
+  .legal-services-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .intro {
+    max-width: 800px; /* Set a max width for the introduction */
+    margin: 0 auto; /* Center the introduction */
+    padding:20px;
+  }
+  
+  .intro p {
+    text-align: center;
+    color: #091e42; /* Align the text within the introduction to the left */
+  }
+
+  .main-heading{
+    color: royalblue;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+  }
+
+  .sub{
+    color: royalblue;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: 400;
+  }

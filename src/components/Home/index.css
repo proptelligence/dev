@@ -1,0 +1,303 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    width: 90%;
+    max-width: 1110px;
+    height: 90vh;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .home-container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 40px; 
+    }
+  }
+  
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .home-content {
+      align-items: flex-start;
+    }
+  }
+  
+  .home-mobile-img {
+    width: 206px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .home-mobile-img {
+      display: none;
+    }
+  }
+  
+  .home-desktop-img {
+    width: 59%;
+    max-width: 510px;
+    margin-left: 45px;
+    border-radius: 6px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .home-desktop-img {
+      display: none;
+    }
+  }
+  
+  .home-heading {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    margin-top: 0px;
+    font-size: 30px;
+    color: #1e293b;
+    text-align: center;
+  }
+  .sub-heading1 {
+    font-family: 'PT Sans', sans-serif;
+    margin-top: 0px;
+    font-size: 23px;
+    padding-bottom: 6px;
+    color: #1e293b;
+    text-align: left;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .home-heading {
+      font-size: 43px;
+      text-align: left;
+      padding-bottom: 10px;
+    }
+    .sub-heading {
+      font-size: 23px;
+      text-align: left;
+      padding-bottom: 10px;
+    }
+  }
+  
+  .home-description {
+    font-family: 'PT Sans', sans-serif;
+    margin-top: 36px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #006ac2;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .home-description {
+      font-size: 19px;
+      margin-top: 0;
+      font-weight: 500;
+      text-align: left;
+    }
+  }
+  
+  .shop-now-button {
+    width: 150px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Roboto';
+    color: white;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 6px;
+    background-color: #0967d2;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .shop-now-button {
+      font-size: 16px;
+    }
+  }
+  
+  .product-sections {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+    max-width: 1110px;
+  }
+  .service-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .service-item {
+    width: 500px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  
+  .mission-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    width: 90%;
+    max-width: 1110px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .mission-cont {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 40px;
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .home-content1 {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  
+  .cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .home-content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .home-content1 {
+      align-items: flex-end;
+    }
+  }
+  
+  .home-heading1 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    margin-top: 0px;
+    font-size: 30px;
+    color: #1e293b;
+    text-align: right;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .home-heading1 {
+      font-size: 43px;
+      text-align: right;
+    }
+  }
+  
+  .home-description1 {
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 28px;
+    color: #64748b;
+    margin-bottom: 0;
+    text-align: end;
+  }
+
+  /* CSS */
+
+.service-section {
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  background-color: #0967d2;
+  font-weight: 600;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-heading {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  margin-top: 0px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+.service-item {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-image {
+  transform: scale(1.1);
+}
+
+.service-item h3 {
+  margin: 10px 0;
+  color: #333; /* Adjust color as needed */
+}
+
+.service-item p {
+  color: #666;
+}
+
+/* Animation for fadeIn effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-item {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 0.3s; /* Delay for staggered fadeIn effect */
+}

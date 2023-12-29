@@ -1,0 +1,206 @@
+
+.wrap-cont{
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.technology-container {
+  text-align: center;
+  font-family: 'PT Sans', sans-serif; 
+}
+
+.main-heading {
+  margin-top: 50px;
+  font-size: 2em;
+}
+
+.sub-heading {
+  margin-bottom: 50px;
+  color: #666;
+  text-align: center;
+}
+
+.tech-sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  margin: 5px;
+}
+
+.tech-image {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tech-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tech-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.tech-text-overlay h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: aliceblue;
+}
+
+.tech-text-overlay p {
+  opacity: 1;
+  color: wheat;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.tech-image:hover img {
+  transform: scale(1.1);
+}
+
+.tech-image:hover .tech-text-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-image.clicked .tech-text-overlay p {
+  opacity: 1;
+  white-space: normal;
+  overflow: visible;
+}
+
+
+/* For Paragraph Text */
+.tech-sections p {
+  margin-top: 10px; /* Adjust top margin as needed */
+  line-height: 1.6; /* Adjust line-height as needed */
+  font-size: 16px; /* Adjust font-size as needed */
+  color: #006ac2;
+}
+
+
+/* Your existing CSS styles */
+/* ... */
+
+/* Tech sections container */
+.wrap-cont {
+  display: flex;
+  justify-content: space-between; /* Adjust the spacing between sections */
+}
+
+/* Each tech section */
+.tech-sections {
+  position: relative;
+  width: 45%; /* Adjust width as needed */
+  margin-bottom: 20px; /* Spacing between sections */
+}
+
+.tech-image {
+  position: relative;
+}
+
+/* Overlay for text content */
+.tech-text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: transparent; /* Example background color */
+}
+
+/* Centered content within overlay */
+.centered-content {
+  padding: 20px;
+}
+
+
+/* Styling for list inside the specific container */
+.animated-list-container{
+  margin-top: 7px;
+}
+.animated-list-container ul {
+  list-style: none;
+  padding-left: 0;
+ 
+}
+
+.list-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  list-style: decimal; 
+  text-align: left;
+}
+
+.list-item::before {
+ 
+  position: absolute;
+  left: -20px;
+  top: 0;
+  background-color: #3498db;
+  color: white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.list-item {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Hover effect */
+.list-item:hover {
+  color: #3498db;
+  cursor: pointer;
+}
+
+

@@ -1,0 +1,207 @@
+.property-management-services {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .service-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .service {
+    flex: 1;
+   
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .service h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  
+  .service ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .service ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  /* Styling for City Dropdown */
+  .property-management-services select {
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .property-management-services select:focus {
+    outline: none;
+    border-color: #555;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Additional styles for the header */
+  }
+  
+  .header button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    /* Additional styles for the button */
+  }
+  
+  .header button:hover {
+    background-color: #0056b3;
+  }
+  
+  .pms-heading {
+    color: #4b3aad;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+
+  .cities-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .city-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 150px;
+  }
+  
+  .city-button:hover {
+    /* Styles for hover effect */
+    background-color:#006ac2;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .city-image {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .city-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .city-text {
+    text-align: center; 
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+  /* For renderCategories */
+  .categories {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .category-options {
+    display: flex;
+  }
+  
+  .category-options button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-options button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .category-options button.active {
+    background-color: #66ccff;
+    color: #fff;
+  }
+
+.budget-filters {
+  margin-top: 20px;
+  
+}
+
+.budget-options button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.budget-options button.selected {
+  background-color: #66ccff;
+  color: #fff;
+}
+
+/* For renderServices */
+.services {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.services h3 {
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  margin-bottom: 5px;
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.service h3:hover {
+  background-color: #e0e0e0;
+}
+

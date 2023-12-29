@@ -1,0 +1,157 @@
+/* index.css */
+.services {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service {
+  text-align: left;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  width: 100%;
+}
+
+.service button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.service button svg {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.service button:hover {
+  background-color: #f0f0f0;
+}
+
+.service > div {
+  margin-top: 20px;
+}
+
+.service h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.service > div > p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.service > div > button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.service > div > button:hover {
+  background-color: #e5e5e5;
+  color: #333;
+}
+/* index.css */
+/* ... (existing styles) */
+
+.service > div {
+  margin-top: 20px;
+}
+
+.service h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.service > div > p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.service > div > button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.service > div > button:hover {
+  background-color: #e5e5e5;
+  color: #333;
+}
+
+/* Specific styles for the Sell container */
+.service > div > div {
+  margin-top: 15px;
+}
+
+.service > div > div > p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.service > div > div > button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  font-family: 'PT Sans', sans-serif;
+  color: #333;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.service > div > div > button:hover {
+  background-color: blueviolet;
+}
+
+
+/* index.css */
+.services {
+  /* Your styles for the services container */
+}
+
+.service {
+  /* Your styles for the service section */
+}
+
+button {
+  /* Your default button styles */
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: blue;
+  color: white;
+}
+
+#post-button2{
+  background-color: #333;
+}
