@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Proptelligence",
+  "name": "Proptelligence",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://res.cloudinary.com/ajaymedidhi7/image/upload/v1702141574/yaja_caig4a.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },

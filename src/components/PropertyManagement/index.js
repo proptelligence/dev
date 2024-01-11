@@ -1,10 +1,11 @@
+// PropertyManagement.js
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart, FaHandshake } from 'react-icons/fa'; 
-import RenderServices  from '../RenderServices';
+import { FaShoppingCart, FaHandshake } from 'react-icons/fa';
+import RenderServices from '../RenderServices';
 import './index.css';
 
-// Map city names to their respective image URLs
 const cityImages = {
   Mumbai: 'https://img.freepik.com/premium-photo/taj-mahal-hotel_78361-4512.jpg',
   Delhi: 'https://img.freepik.com/premium-photo/india-gate-background-cloudy-sky-sightseeing-new-delhi-view-from-road_431724-6913.jpg',
@@ -62,12 +63,13 @@ const PropertyManagement = () => {
     '9-10L',
   ];
 
+
   const renderCategories = () => {
     if (selectedCity && showCategories) {
       return (
         <div className="categories">
           <button onClick={handleBack}>Back to Cities</button>
-          <h3>Categories for {selectedCity}</h3>
+         
           <div className="category-options">
           <button
             onClick={() => handleOptionChange('Residential')}
@@ -104,16 +106,14 @@ const PropertyManagement = () => {
     return null;
   };
 
-
-
   return (
     <div className="property-management-services">
       <div className="header">
         <h2 className="pms-heading">Property Management Services</h2>
         <Link to="/post">
-          <button>Post Property</button>
+          <button >Post Property <span className="free-btn">Free</span></button>
         </Link>
-      </div> 
+      </div>
       <div>
         <h1>Select your City</h1>
       </div>
@@ -135,10 +135,8 @@ const PropertyManagement = () => {
           </div>
         ))}
       </div>
-      {/* Render categories and services */}
       {renderCategories()}
-    
-      <RenderServices selectedOption={selectedOption} />
+      <RenderServices selectedOption={selectedOption} selectedCity={selectedCity} />
     </div>
   );
 };

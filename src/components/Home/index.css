@@ -9,6 +9,7 @@
     width: 90%;
     max-width: 1110px;
     height: 90vh;
+    background-color: #f9f9f9;
   }
   
   @media screen and (min-width: 768px) {
@@ -52,6 +53,7 @@
     .home-desktop-img {
       display: none;
     }
+ 
   }
   
   .home-heading {
@@ -133,26 +135,7 @@
     width: 90%;
     max-width: 1110px;
   }
-  .service-section {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .services-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .service-item {
-    width: 500px;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
+
   
   .mission-cont {
     display: flex;
@@ -213,10 +196,20 @@
   }
   
   @media screen and (min-width: 768px) {
+  
     .home-heading1 {
       font-size: 43px;
       text-align: right;
     }
+    
+.service-item {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 45%;
+  transition: all 0.3s ease;
+}
   }
   
   .home-description1 {
@@ -230,11 +223,14 @@
 
   /* CSS */
 
+
+
 .service-section {
   text-align: center;
   font-family: 'PT Sans', sans-serif;
-  background-color: #0967d2;
+  background-color: #f9fbfe;
   font-weight: 600;
+  padding-top: 40px;
 }
 
 .services-container {
@@ -242,19 +238,13 @@
   justify-content: center;
   align-items: center;
 }
-.service-heading {
-  font-family: 'PT Sans', sans-serif;
-  font-weight: bold;
-  margin-top: 0px;
-  font-size: 30px;
-  color: white;
-  text-align: center;
-}
+
 .service-item {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  background-color: white;
   transition: all 0.3s ease;
 }
 
@@ -264,11 +254,33 @@
 }
 
 .service-image {
-  width: 200px;
-  height: 150px;
+  width: 400px;
+  height: 250px;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
+}
+
+@media  screen and (max-width:756px) {
+
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+   
+
+  .service-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  
 }
 
 .service-item:hover .service-image {
@@ -300,4 +312,133 @@
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
   animation-delay: 0.3s; /* Delay for staggered fadeIn effect */
+}
+.service-heading {
+  font-family: 'PT Sans', sans-serif;
+  margin-top: 0px;
+  font-size: 30px;
+  color: #1e293b;
+  font-weight: 600;
+  text-align: center;
+}
+
+.heading-2{
+    font-family: 'PT Sans', sans-serif;
+    color:  #0b69ff;
+    font-weight: 550;
+    font-size: 25px;
+    text-decoration: none; 
+    padding: 10px;
+}
+
+.des-1{
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+.service-item {
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a shadow effect */
+  transition: transform 0.3s ease-in-out; /* Adding a smooth transition */
+}
+
+.service-item:hover {
+  transform: translateY(-5px); /* Applying a slight lift effect on hover */
+}
+
+
+
+.heading-2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.des-1 {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Example CSS styles for the footer */
+
+/* General footer styles */
+.footer {
+  background-color: #05141f;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  color: white;
+}
+
+.footer-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  text-align: left;
+}
+
+.footer-section ul li a:hover {
+  color: #000;
+}
+
+.footer-section p {
+  margin-bottom: 5px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.social-links li {
+  margin-right: 10px;
+}
+
+.social-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.social-links li a:hover {
+  color: #000;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-bottom p {
+  font-size: 0.9em;
+  color: white;
 }

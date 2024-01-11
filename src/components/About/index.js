@@ -4,7 +4,7 @@ import Navbar from '../Navbar'
 const About = () => (
   <> 
   <Navbar/>
-    <div className="cont1">
+    <div className="cont-1">
       <div className="about-us">
         <div className='about-cont'>
         <h2>About Us</h2>

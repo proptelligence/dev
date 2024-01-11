@@ -4,6 +4,19 @@ import React, { useState } from 'react';
 import './index.css'; // Linking the CSS file
 
 const PostProperty = () => {
+
+  const [userType, setUserType] = useState('Owner');
+  const [purpose, setPurpose] = useState('');
+
+  const handleUserTypeClick = (type) => {
+    setUserType(type);
+  };
+
+  const handlePurposeClick = (purpose) => {
+    setPurpose(purpose);
+  };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Logic for handling form submission
@@ -47,51 +60,62 @@ const PostProperty = () => {
       <div className="form-container">
         <h3>Let's get you started</h3>
         <form onSubmit={handleSubmit}>
-          <div className="user-type">
-            <p>You are:</p>
-            <button
-          className={clickedButton === 'Owner' ? 'blue-button' : 'white-button'}
-          onClick={() => handleButtonClick('Owner')}
+      <div className="user-type">
+        <p>You are:</p>
+        <button
+          className={userType === 'Owner' ? 'blue-button' : 'white-button'}
+          onClick={() => handleUserTypeClick('Owner')}
         >
           Owner
-        </button> 
-        <button
-          className={clickedButton === 'Owner' ? 'blue-button' : 'white-button'}
-          onClick={() => handleButtonClick('Owner')}
-        >
-     Agent
         </button>
         <button
-          className={clickedButton === 'Owner' ? 'blue-button' : 'white-button'}
-          onClick={() => handleButtonClick('Owner')}
+          className={userType === 'Agent' ? 'blue-button' : 'white-button'}
+          onClick={() => handleUserTypeClick('Agent')}
         >
-            Builder
+          Agent
         </button>
-            
-          </div>
-          <div className="purpose">
-            <p>You are here to:</p>
-            <button className="white-button">Buy</button>
-            <button className="white-button">Sell</button>
-            <button className="white-button">Rent</button>
-
-          </div>
-          <div className="contact-info">
-            <label>
-              Your contact number
-              <select>
-                <option value="IND">IND +91</option>
-                {/* Other country codes can be added */}
-              </select>
-              <input type="tel" placeholder="Enter your contact number" />
-            </label>
-            <button type="submit" className="submit-button">Submit</button> 
-           
-
-          </div>
-        
-        
-        <div className="social-buttons">
+        <button
+          className={userType === 'Builder' ? 'blue-button' : 'white-button'}
+          onClick={() => handleUserTypeClick('Builder')}
+        >
+          Builder
+        </button>
+      </div>
+      <div className="purpose">
+        <p>You are here to:</p>
+        <button
+          className={purpose === 'Buy' ? 'blue-button' : 'white-button'}
+          onClick={() => handlePurposeClick('Buy')}
+        >
+          Buy
+        </button>
+        <button
+          className={purpose === 'Sell' ? 'blue-button' : 'white-button'}
+          onClick={() => handlePurposeClick('Sell')}
+        >
+          Sell
+        </button>
+        <button
+          className={purpose === 'Rent' ? 'blue-button' : 'white-button'}
+          onClick={() => handlePurposeClick('Rent')}
+        >
+          Rent
+        </button>
+      </div>
+      <div className="contact-info">
+        <label>
+          Your contact number
+          <select>
+            <option value="IND">IND +91</option>
+            {/* Other country codes can be added */}
+          </select>
+          <input type="tel" placeholder="Enter your contact number" />
+        </label>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
+      </div> 
+      <div className="social-buttons">
           <button className="google-button" onClick={handleGoogleLogin}>
             <img src="https://res.cloudinary.com/ajaymedidhi7/image/upload/v1703231079/R.27fa9f7a7ce6789c74f3679be56786c8_yfkeia.jpg" alt="Google Logo" />
             Continue with Google
@@ -101,12 +125,13 @@ const PostProperty = () => {
             Continue with Facebook
           </button>
           <button className="linkedin-button" onClick={handleLinkedInLogin}>
-            <img src="https://img.freepik.com/premium-vector/linkedin-icon-paper-cut-style-social-media-icons_505135-239.jpg" alt="LinkedIn Logo" />
-            Continue with LinkedIn
+            <img src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg" alt="X Logo" />
+            Continue with X
           </button>
         </div>
+    </form>
 
-        </form>
+        
       </div>
     </div>
   );

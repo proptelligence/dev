@@ -1,0 +1,119 @@
+/* Title Search Container */
+.title-search-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Main Heading Style */
+  .title-search-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0066ff;
+  }
+  
+  /* Paragraph Style */
+  .title-search-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Container Wrapper Style */
+  .ts-containers-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Half Container Style */
+  .ts-half-container {
+    width: calc(50% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Image Style */
+  .ts-half-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  /* Heading Style */
+  .ts-half-container h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #333;
+  }
+  
+  /* Paragraph Style within Half Container */
+  .ts-half-container p {
+    color: #666;
+  }
+  
+
+  /* index.css */
+/* ... (existing styles) ... */
+
+/* New styles for TitleSearch component */
+
+.title-search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title-search-container h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.title-search-container p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.ts-containers-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.ts-half-container {
+  width: 48%; /* Adjust width for smaller screens */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.ts-half-container img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.ts-half-container h2 {
+  color: royalblue;
+  font-size: 1.2rem;
+  margin: 15px;
+}
+
+.ts-half-container p {
+  color: #444;
+  font-size: 1rem;
+  margin: 0 15px 15px;
+}

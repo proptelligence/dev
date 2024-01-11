@@ -1,0 +1,74 @@
+/* Drafting Container */
+.drafting-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Main Heading Style */
+  .drafting-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0066ff;
+  }
+  
+  /* Paragraph Style */
+  .drafting-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Container Wrapper Style */
+  .drafting-containers-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  /* Half Container Style */
+  .drafting-half-container {
+    display: flex;
+    width: calc(95% - 10px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Image Content Wrapper Style */
+  .image-content-wrapper {
+    flex: 0 0 40%;
+    max-width: 50%; /* Ensures image occupies 40% of container */
+  }
+  
+  /* Image Style */
+  .image-content-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  /* Text Content Style */
+  .text-content {
+    flex: 0 0 60%;
+    padding: 20px;
+  }
+  
+  /* Heading Style */
+  .text-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Paragraph Style within Text Content */
+  .text-content p {
+    color: #666;
+  }
+  

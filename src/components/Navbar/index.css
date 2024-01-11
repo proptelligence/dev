@@ -2,7 +2,7 @@
     background-color: #006ac2;
     height: 80px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-size: 1.2rem;
   }
@@ -173,6 +173,9 @@
     border-radius: 4px;
     margin: 5px;
     cursor: pointer;
+    width: 135px;
+    margin-top: 20px;
+    margin-left: 40px;
   }
   
   @media screen and (max-width: 767px) {
@@ -209,4 +212,18 @@
     padding: 0;
     
   }
+  
+
+  .website-logo {
+    width: 110px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .website-logo {
+      width: 165px;
+      border-radius: 3px;
+     
+    }
+  }
+  
   

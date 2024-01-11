@@ -1,104 +1,63 @@
-.main-cont{
-    background-color: #02797f; 
-    padding: 20px;
-    height: 100vh;
+/* index.css */
+.logo-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #007bff;
+  height: 100vh;
+  align-items: center;
 }
 
-.heading1{
-  text-align: center;
-  padding-bottom: 15px;
-}
-/* Styles for the login container */
 .login-container {
-    max-width: 430px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  /* Styles for the form elements */
-  .login-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input[type='text'],
-  input[type='password'] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button[type='submit'] {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button[type='submit']:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Styles for the social login buttons */
-  .social-login {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .social-login button {
-    padding: 10px 15px;
-    background-color: #ddd;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .social-login button:hover {
-    background-color: #ccc;
-  }
-  .social-buttons{
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    text-align: center;
-  }
-  .google-button{
-    margin-bottom: 5px;
-    width: 350px;
-   
-    
-  }
-  .facebook-button{
-    margin-bottom: 5px;
-    width: 350px;
-   
-  }
-  .linkedin-button{
-    margin-bottom: 5px;
-    width: 350px;
-  }
 
-  .row-lines {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    margin-right: 10px;
-    align-items: center;
-    gap: 10px; /* Adjust as needed for spacing */
-  }
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#login-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+
+.error-message {
+  color: #ff0000;
+  margin-bottom: 10px;
+  text-align: center;
+}

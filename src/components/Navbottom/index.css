@@ -1,0 +1,286 @@
+/* Navbottom.css */
+.navbottom-container {
+    background-color: #006ac2;
+    padding: 20px;
+    /* Add other container styles */
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    /* Add other navbar styles */
+  }
+  
+  .nav-item {
+    position: relative;
+    margin: 0 15px;
+    text-align: center;
+    /* Other nav-item styling */
+  }
+  
+  .nav-links {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    /* Other nav-links styling */
+  }
+  
+  /* Dropdown Styles */
+  /* Add styles for dropdown and dropdownS components */
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    /* Other footer-container styles */
+  }
+  
+  .footer-section {
+    /* Add styles for footer sections */
+  }
+  
+  .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /* Other styles for social links */
+  }
+  
+  .social-links li {
+    margin-right: 10px;
+    /* Other styles for social link items */
+  }
+  
+
+  /* Navbottom.css */
+.navbottom-container {
+    background-color: #006ac2;
+    padding: 20px;
+    /* Add other container styles */
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    /* Add other navbar styles */
+  }
+  
+  .nav-item {
+    position: relative;
+    margin: 0 15px;
+    /* Other nav-item styling */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-links {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    /* Other nav-links styling */
+  }
+  
+  .nav-links:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #333;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-links:hover:before {
+    width: 100%;
+  }
+  
+  /* Dropdown Styles */
+  /* Add styles for dropdown and dropdownS components */
+  .dropdown,
+  .dropdownS {
+    display: none;
+    /* Other dropdown styles */
+  }
+  
+  .nav-item:hover .dropdown,
+  .nav-item:hover .dropdownS {
+    display: block;
+    /* Other styles when hovering */
+    animation: fadeInDown 0.5s ease forwards;
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    /* Other footer-container styles */
+  }
+  
+  .footer-section {
+    /* Add styles for footer sections */
+  }
+  
+  .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /* Other styles for social links */
+  }
+  
+  .social-links li {
+    margin-right: 10px;
+    /* Other styles for social link items */
+  }
+  
+
+
+
+  /* index.css */
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #006ac2;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+ 
+}
+
+.nav-item {
+  margin-right: 0 15px;
+  text-align: center;
+ 
+  
+}
+
+.nav-links {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+.nav-links:hover:before {
+  width: 100%;
+}
+
+.nav-links:hover {
+  color: #f5671a;
+}
+
+/* Dropdown Styles */
+/* Add styles for dropdown and dropdownS components */
+
+.footer-container {
+  display: flex;
+ 
+  width: 100%;
+  max-width: 600px;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links li {
+  margin: 0 5px;
+}
+
+.social-links a {
+  color: #f5671a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f5671a;
+}
+
+
+
+.dropdown,
+.dropdownS {
+  display: none;
+  animation: fadeInDown 0.5s ease;
+}
+
+.nav-item:hover .dropdown,
+.nav-item:hover .dropdownS {
+  display: block;
+  animation-fill-mode: forwards;
+}
+
+/* Navbottom.css or your CSS file */
+.footer-container {
+  display: flex;
+  justify-content: space-around; /* Adjust alignment as needed */
+  /* Other styles as required */
+}
+
+.footer-section {
+  flex: 1; /* This will make both footer sections take equal space */
+  /* Additional styling for the footer sections */
+}

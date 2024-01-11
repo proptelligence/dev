@@ -16,7 +16,7 @@
   .service-1 {
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 250px;
+    width: 300px;
     text-align: center;
     margin: 20px;
     transition: transform 0.3s ease-in-out;
@@ -82,3 +82,148 @@
     font-family: 'Roboto';
     font-weight: 400;
   }
+
+  /* General Styles */
+body {
+  font-family: 'Roboto', sans-serif; /* Change font for the entire page */
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8; /* Set a light background color */
+}
+
+/* Header Styles */
+.main-heading {
+  color: royalblue;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 48px; /* Increase space from the top */
+}
+
+/* Container Styles */
+.legal-services-container {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff; /* Set a white background for the container */
+  border-radius: 15px; /* Add some border radius */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin: 0px auto; /* Center the container */
+  max-width: 1200px; /* Set a maximum width */
+}
+
+/* Introduction Styles */
+.intro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.intro p {
+  text-align: center;
+  color: #333333; /* Darken text color for better readability */
+}
+
+/* Service Blocks */
+.services-cont {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 0px; /* Increase space between services */
+}
+
+.service-1 {
+  border: 1px solid #e0e0e0; /* Lighten border color */
+  border-radius: 15px;
+  width: 250px;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+  background-color: #ffffff; /* White background for service blocks */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.service-1:hover {
+  transform: scale(1.05);
+}
+
+.img1 {
+  width: 100%;
+  height: 200px; /* Adjust image height */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.sub {
+  color: royalblue;
+  font-size: 18px; /* Slightly decrease font size */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  margin-top: 15px; /* Increase space between title and content */
+}
+
+.service-1 p {
+  color: #666666; /* Adjust text color */
+  padding: 10px;
+}
+
+.legal-sub-heading{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  color: #002159;
+  font-weight: 400;
+}
+
+.slide-des{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px;
+  
+}
+
+
+.service-1 {
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  width: 250px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.img1 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.sub {
+  color: royalblue;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.slide-des {
+  color: #333333;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.slide-des a {
+  text-decoration: none;
+  color: royalblue;
+  font-weight: 600;
+}
+
+.slide-des a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
