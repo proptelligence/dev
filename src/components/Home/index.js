@@ -8,8 +8,32 @@ import Navbar from '../Navbar'
 import './index.css'
 const Home = () => (
     <>
-    <Navbar />
-
+    <Navbar /> 
+    <div className="home-container">
+      <div className="home-content">
+        <h1 className="home-heading">
+           World's Leading Property Technology Startup
+        </h1>
+        <img
+          src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
+          alt="clothes to be noticed"
+          className="home-mobile-img"
+        />
+        <p className="home-description">
+          Unlock the power of property intelligence with Proptelligence! Our
+          innovative technologies are designed to help you get the most out of
+          your real estate investments. Get the insights you need to make
+          smarter decisions - with Proptelligence, the future of property is at
+          your fingertips!
+        </p>
+      </div>
+      <img
+        src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
+        alt="dresses to be noticed"
+        className="home-desktop-img"
+      />
+    </div> 
+    <Tech/>
     <div className="service-section">
       <h2 className="service-heading">Our Services</h2>
       <div className="services-container">
@@ -37,39 +61,11 @@ const Home = () => (
           <p className='des-1'> Expert Legal Guidance for Seamless Real Estate Transactions</p>
         </div>
       </div>
-      <Tech/>
-      <div className="home-container">
-      <div className="home-content">
-        <h1 className="home-heading"> World's Leading Property Technology Startup</h1>
-        <h2 className="sub-heading1">
-          Welcome
-        </h2>
-        <img
-          src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
-          alt="clothes to be noticed"
-          className="home-mobile-img"
-        />
-        <p className="home-description">
-          Unlock the power of property intelligence with Proptelligence! Our
-          innovative technologies are designed to help you get the most out of
-          your real estate investments. Get the insights you need to make
-          smarter decisions - with Proptelligence, the future of property is at
-          your fingertips!
-        </p>
-      </div>
-      <img
-        src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
-        alt="dresses to be noticed"
-        className="home-desktop-img"
-      />
-    </div>
+    </div> 
     <footer>
       
-        <Navbottom/>
-    </footer>
-
-
-    </div>
+      <Navbottom/>
+  </footer>
   </>
   )
   

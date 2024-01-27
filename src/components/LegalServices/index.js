@@ -1,9 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './index.css';
 
-const LegalServices = () => (
-  <>
+const LegalServices = () => {  
+
+  const navigate = useNavigate();
+
+  const handleLinkClick = (e) => {
+    const hasJWTToken = localStorage.getItem('jwtToken') !== null;
+
+    if (!hasJWTToken) {
+      e.preventDefault();
+      navigate('/signup');
+    }
+  };
+
+  return(<>
     <div className="legal-services-container">
       <h1 className='main-heading'>Legal Services</h1>
       <div className="intro">
@@ -51,36 +63,42 @@ const LegalServices = () => (
         </div>
       
         <div className="service-1">
-        <img
+      <Link to="/payment" onClick={handleLinkClick}>
+       <img
             className="img1"
             src="https://res.cloudinary.com/ajaymedidhi7/image/upload/v1703223055/legal-best_jxmw5i.png"
             alt="Service 1"
-          />
+          /> 
+              </Link> 
           <h2 className='sub'>
           Affidavits
           </h2>
           <p className='slide-des' >
           An affidavit is a sworn statement made voluntarily under oath or affirmation before a qualified authority.
-          ..<Link to="/affidavits"><span>Read More</span></Link>
-          </p>
+          ..<Link to="/payment" onClick={handleLinkClick}><span>Read More</span></Link>
+          </p> 
+      
         </div> 
 
-        <div className="service-1">
-        <img
+        <div className="service-1"> 
+        <Link to="/payment" onClick={handleLinkClick}>  <img
             className="img1"
             src="https://img.freepik.com/premium-photo/real-estate-loan-home-agent-sale-agreement-insurance-finance-contract-signing-are-explaining-customers-office-property-manager-woman-use-computer_36325-3828.jpg"
             alt="Service 1"
-          />
+          /> </Link>
+        
           <h2 className='sub'>
           Registration support at SRO
           </h2>
           <p className='slide-des'>
-          Our legal services provide comprehensive registration support to ensure that all our clients are properly registered with the relevant authorities....<Link to="/registrationSupport"><span>Read More</span></Link>
+          Our legal services provide comprehensive registration support to 
+          ensure that all our clients are properly registered with the 
+          relevant authorities...<Link to="/payment" onClick={handleLinkClick}><span>Read More</span></Link>
           </p>
         </div>
       </div>
     </div>
-  </>
-);
+  </> )
+};
 
 export default LegalServices;

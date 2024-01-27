@@ -1,11 +1,7 @@
 /* index.css */
 
 /* General styles */
-body {
-  font-family: 'PT Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+
 
 .main-cont {
   display: flex;
@@ -17,8 +13,7 @@ body {
 
 .sign-in-container {
   background-color: #fff;
-  padding: 15px;
-  
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -38,8 +33,8 @@ body {
 }
 
 input {
-  width: calc(100% - 10px);
-  padding: 8px;
+  width: 10px;
+  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;

@@ -23,7 +23,7 @@ const ContactUs = () => {
           <div className="contact-details">
             <p>Say Hello</p>
             <p>080-71176088</p>
-            <p>info@proptelligence.net</p> 
+            <p>connect@proptelligence.net</p> 
           </div>
           {/* Add Social Media Buttons */}
           <div className="social-media-buttons">

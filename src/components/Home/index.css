@@ -16,7 +16,7 @@
     .home-container {
       flex-direction: row;
       justify-content: space-between;
-      padding-top: 40px; 
+      padding-top: 30px; 
     }
   }
   
@@ -62,15 +62,16 @@
     margin-top: 0px;
     font-size: 30px;
     color: #1e293b;
-    text-align: center;
+    text-align: center; 
+    
   }
   .sub-heading1 {
     font-family: 'PT Sans', sans-serif;
     margin-top: 0px;
-    font-size: 23px;
+    font-size: 35px;
     padding-bottom: 6px;
-    color: #1e293b;
-    text-align: left;
+    color: #1e293b; 
+    text-align: left; 
   }
   
   @media screen and (min-width: 768px) {
@@ -231,6 +232,7 @@
   background-color: #f9fbfe;
   font-weight: 600;
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .services-container {

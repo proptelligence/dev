@@ -5,6 +5,7 @@
     margin-top: 20px;
     border-radius: 10px;
     background-color: white;
+   
 
   }
   
@@ -50,12 +51,13 @@
     height: 60vh;
     height: 100vh;
     padding: 10px;
+    background-image: url("https://img.freepik.com/premium-vector/abstract-dark-blue-gradient-circles-background-vector-illustration_518299-622.jpg");
   }
 
   .about-cont{
     background-color: #e6f6ff;
     padding: 25px;
-    max-width: 900px;
+    max-width: 1000px;
     border-radius: 6px;
     margin-bottom: 20px;
   }

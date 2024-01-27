@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from '../Dropdown';
-import DropdownS from '../Dropdown';
+import DropdownS from '../DropdownS';
 import './index.css'; // Import updated styles
 
 function Navbottom() {
@@ -81,26 +81,31 @@ function Navbottom() {
         <div className='footer-section contact'>
           <h3>Contact Us</h3>
           <p>
-            <i className='fa fa-phone' /> Toll Free - 1800 41 99099
+            <i className='fa fa-phone' /> 080-71176088
           </p>
-          <p>Email - info@proptelligence.net</p>
+          <p>Email - connect@proptelligence.net</p>
         </div>
         <div className='footer-section follow'>
           <h3>Follow Us</h3>
           <ul className='social-links'>
-            <li>
-              <a href='https://facebook.com/proptelligence' target='_blank' rel='noopener noreferrer'>
-                <i className='fab fa-facebook'></i> Facebook
+          <li>
+              <a href='https://www.linkedin.com/company/proptelligence/' target='_blank' rel='noopener noreferrer'>
+                <i className='fab fa-linkedin'></i> 
               </a>
             </li>
             <li>
-              <a href='https://instagram.com/proptelligence' target='_blank' rel='noopener noreferrer'>
-                <i className='fab fa-instagram'></i> Instagram
+              <a href='https://www.facebook.com/proptelligence' target='_blank' rel='noopener noreferrer'>
+                <i className='fab fa-facebook'></i> 
               </a>
             </li>
             <li>
-              <a href='https://twitter.com/proptelligence' target='_blank' rel='noopener noreferrer'>
-                <i className='fab fa-twitter'></i> Twitter
+              <a href='https:/instagram.com/proptelligence' target='_blank' rel='noopener noreferrer'>
+                <i className='fab fa-instagram'></i>
+              </a>
+            </li>
+            <li>
+              <a href='https:/x.com/proptelligence' target='_blank' rel='noopener noreferrer'>
+                <i className='fab fa-twitter'></i> 
               </a>
             </li>
           </ul>

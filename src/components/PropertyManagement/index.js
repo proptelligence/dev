@@ -45,14 +45,14 @@ const PropertyManagement = () => {
   };
 
   const cities = [
-    'Mumbai',
-    'Delhi',
+    'Ahmedabad',
     'Bangalore',
+    'Chennai',
+    'Delhi',
     'Hyderabad',
     'Kolkata',
-    'Chennai',
+    'Mumbai',
     'Pune',
-    'Ahmedabad',
   ];
 
   const budgetOptions = [

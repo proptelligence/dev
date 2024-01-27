@@ -87,11 +87,11 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .ts-half-container {
-  width: 48%; /* Adjust width for smaller screens */
+  width: 40%; /* Adjust width for smaller screens */
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -100,7 +100,7 @@
 }
 
 .ts-half-container img {
-  width: 100%;
+  width: 85%;
   height: auto;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;

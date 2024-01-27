@@ -1,17 +1,34 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './index.css'; // Import the CSS file
 
 const Drafting = () => {
+  const [showCategoriesFirstContainer, setShowCategoriesFirstContainer] = useState(false);
+  const [showCategoriesSecondContainer, setShowCategoriesSecondContainer] = useState(false);
+  const navigate = useNavigate();
+
   const handleLinkClick = (e) => {
     const hasJWTToken = localStorage.getItem('jwtToken') !== null;
+
     if (!hasJWTToken) {
-      e.preventDefault(); // Prevent default link behavior
-      window.location.href = '/signup';
+      e.preventDefault();
+      navigate('/signup');
     }
   };
+
+  const handleTitleImageClickFirstContainer = () => {
+    // Toggle the visibility of the category buttons for the first container
+    setShowCategoriesFirstContainer(!showCategoriesFirstContainer);
+  };
+
+  const handleTitleImageClickSecondContainer = () => {
+    // Toggle the visibility of the category buttons for the second container
+    setShowCategoriesSecondContainer(!showCategoriesSecondContainer);
+  };
+
   return (
-    <div className="drafting-container">
+    <>
+      <div className="title-search-container">
       <h1>Legal Document Drafting</h1>
       <p>
         Deeds and agreements are legal documents that can be used to record and document 
@@ -24,33 +41,52 @@ const Drafting = () => {
         aspects associated with deeds and agreements. If you have any questions or require any
         advice, please contact us for a free initial consultation.
       </p>
-      <div className="drafting-containers-wrapper">
-        <div className="drafting-half-container">
-        
-         <div className="image-content-wrapper">
-         <Link to="/payment"  onClick={handleLinkClick}>
-            <img src="https://img.freepik.com/free-photo/lawyer-office-lawyer-team-working-wood-table-with-smartphone-laptop-tablet-consult-business-law_342744-753.jpg" alt="Legal Drafting" />
-            </Link>
-          </div>
-        
-          <div className="text-content">
-            <h2>Contract Drafting</h2>
-            <p>We draft comprehensive contracts covering various legal aspects to protect your interests.</p>
-          </div>
-        </div>
-        <div className="drafting-half-container">
-          <div className="image-content-wrapper">
-            <Link to="/payment"  onClick={handleLinkClick}>
-            <img src="https://img.freepik.com/free-vector/notary-service-concept-professional-lawyer-signing-legalizing-paper-document-person-witnessing-signatures-document-isolated-flat-vector-illustration_613284-1686.jpg" alt="Legal Drafting" />
-            </Link>
-          </div>
-          <div className="text-content">
-            <h2>Agreement Drafting</h2>
+
+       
+        <div className="ts-containers-wrapper">
+          {showCategoriesFirstContainer ? (
+            <div className='ts-half-container'>
+              <div className="category-buttons">
+                <Link to="/payment" onClick={handleLinkClick}>Sale Agreement</Link>
+                <Link to="/payment" onClick={handleLinkClick}>Rent & Lease Agreement</Link>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className="ts-half-container" onClick={handleTitleImageClickFirstContainer}>
+                <img src="https://img.freepik.com/free-vector/notary-service-concept-professional-lawyer-signing-legalizing-paper-document-person-witnessing-signatures-document-isolated-flat-vector-illustration_613284-1686.jpg" alt="Legal Drafting"  />
+                <h2>Agreement Drafting</h2>
             <p>Our team creates clear and concise agreements tailored to your specific requirements.</p>
-          </div>
+
+              </div>
+            </>
+          )}
+          {showCategoriesSecondContainer ? (
+            <div className='ts-half-container'>
+              <div className="category-buttons">
+              <Link to="/payment" onClick={handleLinkClick}>Sale</Link>
+                <Link to="/payment" onClick={handleLinkClick}>Gift</Link>
+                <Link to="/payment" onClick={handleLinkClick}>Release</Link>
+                <Link to="/payment" onClick={handleLinkClick}>Rectification</Link>
+                <Link to="/payment" onClick={handleLinkClick}>Will</Link>
+                <Link to="/payment" onClick={handleLinkClick}>GPA</Link>
+                <Link to="/payment" onClick={handleLinkClick}>SPA</Link>
+                <Link to="/payment" onClick={handleLinkClick}>Mortgage</Link>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className="ts-half-container" onClick={handleTitleImageClickSecondContainer}>
+                <img src="https://img.freepik.com/free-photo/lawyer-office-lawyer-team-working-wood-table-with-smartphone-laptop-tablet-consult-business-law_342744-753.jpg" alt="Legal Drafting"/>
+                 <h2>Deeds</h2>
+            <p>We draft comprehensive contracts covering various legal aspects to protect your interests.</p>
+
+              </div>
+            </>
+          )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
