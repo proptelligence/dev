@@ -79,11 +79,19 @@ function Navbottom() {
 
       <div className='footer-container'>
         <div className='footer-section contact'>
-          <h3>Contact Us</h3>
-          <p>
-            <i className='fa fa-phone' /> 080-71176088
-          </p>
-          <p>Email - connect@proptelligence.net</p>
+          <h3>Quick Links</h3>
+         
+         <ul>
+          <li>
+            <Link to='propertyForm'>Post Property</Link>
+          </li> 
+          <li>
+            <Link to='legalservices'>Legal Services</Link>
+          </li>
+          <li>
+            <Link to='prop'>Property Management Services</Link>
+          </li>
+         </ul>
         </div>
         <div className='footer-section follow'>
           <h3>Follow Us</h3>

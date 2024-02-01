@@ -23,7 +23,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3005/register', {
+      const response = await axios.post('http://localhost:3000/register', {
         name,
         mobile,
         email,

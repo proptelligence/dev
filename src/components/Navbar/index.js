@@ -63,10 +63,8 @@ function Navbar() {
             </>
           ) : (
             <Link to="/signup">
-              <button type="button" className="logout-desktop-btn">
-                Login / Sign Up
-              </button>
-            </Link>
+            <button className="btn-2">Post Property <span className="free-btn">Free</span></button>
+          </Link>
           )}
         </ul>
       </nav>
