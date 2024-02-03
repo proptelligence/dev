@@ -471,3 +471,58 @@
     transform: translateY(0);
   }
 }
+
+
+
+
+
+.cities-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+.city-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 150px;
+}
+
+.city-button:hover {
+  /* Styles for hover effect */
+  background-color:#006ac2;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.city-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.city-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city-text {
+  text-align: center; 
+  font-family: 'PT Sans', sans-serif;
+}
+
+.city-heading{
+  text-align: center;
+  padding-bottom: 10px;
+}

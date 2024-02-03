@@ -66,6 +66,7 @@ const ContactUs = () => {
           </p>
           <div className="contact-details">
             <p>Say Hello</p>
+            <p>8062181169</p>
             <p>080-71176088</p>
             <p>connect@proptelligence.net</p> 
           </div>

@@ -23,7 +23,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/register', {
+      const response = await axios.post('authentication-7-production.up.railway.app', {
         name,
         mobile,
         email,

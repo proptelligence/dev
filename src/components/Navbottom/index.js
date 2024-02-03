@@ -79,19 +79,28 @@ function Navbottom() {
 
       <div className='footer-container'>
         <div className='footer-section contact'>
-          <h3>Quick Links</h3>
-         
-         <ul>
-          <li>
-            <Link to='propertyForm'>Post Property</Link>
-          </li> 
-          <li>
-            <Link to='legalservices'>Legal Services</Link>
+          <h3>Popular Cities</h3>
+          <ul className='ui'>
+          <li className='li-item'>
+            <Link to='/prop'>Bangalore</Link>
           </li>
-          <li>
-            <Link to='prop'>Property Management Services</Link>
+          <li className='li-item'>
+            <Link to='/prop'>Hyderabad</Link>
           </li>
-         </ul>
+          <li className='li-item'> 
+            <Link to='/prop'>Mumbai</Link>
+          </li>
+          <li className='li-item'>
+            <Link to='/prop'>Delhi</Link>
+          </li>
+          <li className='li-item'>
+            <Link to='/prop'>Pune</Link>
+          </li>
+          <li className='li-item'> 
+            <Link to='/prop'>Kolkata</Link>
+          </li>
+          {/* Add more cities as needed */}
+        </ul>
         </div>
         <div className='footer-section follow'>
           <h3>Follow Us</h3>

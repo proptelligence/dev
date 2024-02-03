@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'; 
+
 import './App.css';
 import Home from './components/Home';
 import About from './components/About';
@@ -56,7 +57,15 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
+
+      <Helmet>
+        {/* Bing Verification */}
+        <meta name="msvalidate.01" content="D2A150396A7BEE21CE9769C5C3479F1C" />
+
+        {/* Google Verification */}
+        <meta name="google-site-verification" content="google154aa1c8bf93db82.html" />
+      </Helmet>
       <Routes>
       <Route exact path="/" element={<Home />} /> 
       <Route exact path="/aboutus" element={<About/>}/>

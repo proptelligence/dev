@@ -284,3 +284,16 @@ body {
   flex: 1; /* This will make both footer sections take equal space */
   /* Additional styling for the footer sections */
 }
+
+
+.li-item{
+  border: solid #fff 1px; 
+  border-radius: 4px;
+  margin: 3px;
+  padding: 5px;
+}
+.ui{
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+}
