@@ -221,3 +221,8 @@
   transition: transform 0.3s ease-in-out; /* Animation transition */
   transform: translateX(-100%);
 }
+
+.selected-city {
+  background-color: #f0f0f0; /* Change this color as per your preference */
+  border: 2px solid #000; /* Change border style if needed */
+}

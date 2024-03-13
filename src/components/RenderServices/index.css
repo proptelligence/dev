@@ -104,3 +104,11 @@
 .localities-container button:hover {
   background-color: #2980b9;
 }
+.popup-cont{
+  border: solid #0a0909 2px;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px;
+  background-color: aliceblue;
+  margin: 15px;
+}

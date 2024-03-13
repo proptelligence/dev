@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; 
-import {Link} from 'react-router-dom'
+import Footer from '../Footer'
 import Navbar from '../Navbar';
+import {Link} from 'react-router-dom'
 import './index.css'
 
 const ContactUs = () => {
@@ -24,7 +25,7 @@ const ContactUs = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch('https://formdata-bpqo.onrender.com/send-email', {
+      const response = await fetch('http://localhost:3000/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,10 +53,12 @@ const ContactUs = () => {
       console.error('Error sending email:', error);
     }
   };
+  
 
   return (
     <> 
     <Navbar/>
+    
     <div className="cont1"> 
       <div className="contact-us-container">
         <div className="contact-info"> 
@@ -67,23 +70,22 @@ const ContactUs = () => {
           <div className="contact-details">
             <p>Say Hello</p>
             <p>8062181169</p>
-            <p>080-71176088</p>
             <p>connect@proptelligence.net</p> 
           </div>
           {/* Add Social Media Buttons */}
           <div className="social-media-buttons">
-            <Link to="/facebook">
+            <a href='https://www.facebook.com/proptelligence'>
               <img
                 src="https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg" // Replace with the actual image URL
                 alt="Facebook"
               />
-            </Link>
-            <Link to="/twitter" target="_blank">
+            </a>
+            <a href="https://www.x.com/proptelligence" target="_blank">
               <img
                 src="https://img.freepik.com/premium-vector/vector-new-twitter-logo-x-2023-twitter-x-logo-twitter-with-black-circle_982187-137.jpg" // Replace with the actual image URL
                 alt="Twitter"
               />
-            </Link>
+            </a>
 
             <a href="https://www.linkedin.com/company/proptelligence/">
               <img
@@ -92,12 +94,12 @@ const ContactUs = () => {
               />
             </a>
 
-            <Link to="/instagram" target="_blank">
+            <a  href="https://www.instagram.com/proptelligence" target="_blank">
               <img
                 src="https://img.freepik.com/premium-vector/instagram-icon-paper-cut-style-social-media-icons_505135-235.jpg" // Replace with the actual image URL
                 alt="Instagram"
               />
-            </Link>
+            </a>
           </div>
         </div>
         <div className="contact-form">
@@ -161,7 +163,9 @@ const ContactUs = () => {
         )}
         </div>
       </div>
-    </div>
+    </div> 
+
+    <Footer/>
     </>
   );
 };

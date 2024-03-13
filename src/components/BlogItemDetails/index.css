@@ -1,0 +1,48 @@
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.blog-info {
+  width: 100%;
+  max-width: 660px; /* Limiting maximum width for better readability */
+  margin-bottom: 30px; /* Increased spacing between blog items */
+}
+
+.blog-details-title {
+  font-size: 20px; /* Increased font size for better readability */
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #003366;
+  margin-bottom: 10px; /* Added spacing below title */
+}
+
+.blog-datetime {
+  font-size: 14px; /* Adjusted font size for date */
+  color: #8e8e8e;
+  margin-bottom: 5px; /* Added spacing below date */
+}
+
+.blog-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto; /* Ensuring image aspect ratio is maintained */
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.blog-content {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6; /* Improved line spacing for better readability */
+  color: #2f4f4f;
+}
+
+.main-heading-blog {
+  margin-bottom: 20px;
+  color: #003366;
+  font-size: 24px; /* Increased font size for main heading */
+  text-align: center;
+}

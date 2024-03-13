@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './PropertyForm.css'; // Import the updated CSS file
 import PropertyDetails from '../PropertyDetails';
+import { getDatabase, ref, push } from 'firebase/database'; // Import Firebase database functions
 
 const PropertyForm = ({ showForm, setShowForm }) => {
   const [propertyName, setPropertyName] = useState('');
@@ -9,10 +10,42 @@ const PropertyForm = ({ showForm, setShowForm }) => {
   const [location, setLocation] = useState('');
   const [propertyPhoto, setPropertyPhoto] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setSubmitted(true);
+
+    try {
+      // Get a reference to the database
+      const database = getDatabase();
+
+      // Push data to Firebase database
+      await push(ref(database, 'properties'), {
+        propertyName,
+        description,
+        price,
+        location,
+        // You may need to upload the photo to Firebase Storage and save the URL here
+      });
+
+      // Clear input fields
+      setPropertyName('');
+      setDescription('');
+      setPrice('');
+      setLocation('');
+      setPropertyPhoto(null);
+
+      // Show success message
+      setSuccessMessage('Successfully submitted');
+
+      // Reset submitted state after a short delay
+      setTimeout(() => {
+        setSuccessMessage('');
+        setSubmitted(true);
+      }, 3000);
+    } catch (error) {
+      console.error('Error adding document: ', error);
+    }
   };
 
   return (
@@ -63,18 +96,8 @@ const PropertyForm = ({ showForm, setShowForm }) => {
         />
 
         <button type="submit" className="custom-button">Submit</button>
-        <button onClick={() => setShowForm(false)} className="custom-button">Close</button>
       </form>
-
-      {submitted && (
-        <PropertyDetails
-          propertyName={propertyName}
-          description={description}
-          price={price}
-          location={location}
-          propertyPhoto={propertyPhoto}
-        />
-      )}
+      {successMessage && <div className="success-message">{successMessage}</div>}
     </div>
   );
 };

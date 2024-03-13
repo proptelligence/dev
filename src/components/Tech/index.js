@@ -6,12 +6,11 @@ const Tech = () => {
   return (
     <>
       <div className="tech-home-cont">
-      <center><h1>Solutions</h1></center>
+     
       <div className="slider">
         <div className="container-item">
-         <Link to="/tech"> <img src="https://img.freepik.com/free-photo/ai-human-technology-background_1409-5588.jpg" alt="AI in Real Estate" /></Link>
-          <h2 id='tech-heading'>Artificial Intelligence</h2>
-          <p>AI has made significant strides in the real estate industry, transforming businesses and enhancing customer experiences. Here are a few areas where AI technology has had an impact...<Link to='/tech'><span>Read More</span></Link></p>
+         
+          
         </div>
         <div className="container-item"> 
         <Link to='/tech'> <img src="https://img.freepik.com/premium-photo/amazed-beautiful-caucasian-woman-using-virtual-reality-goggles-studio-modern-interactive-technology-studio_482257-45580.jpg" alt="AR & VR" /></Link>

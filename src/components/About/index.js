@@ -1,9 +1,10 @@
 import './index.css'
 import Navbar from '../Navbar'
+import Footer from '../Footer'
 
 const About = () => (
   <> 
-  <Navbar/>
+    <Navbar/>
     <div className="cont-1">
       <div className="about-us">
         <div className='about-cont'>
@@ -33,7 +34,8 @@ const About = () => (
           that is developing AI for the legal and real estate sectors.
         </p>
       </div>
-    </div>
+    </div> 
+    <Footer/>
   </>
 )
 

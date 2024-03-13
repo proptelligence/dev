@@ -1,139 +1,70 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import './index.css';
+import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  auth,
+  registerWithEmailAndPassword,
+  signInWithGoogle,
+} from "../../firebase";
+import "./index.css";
 
-const SignUp = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    mobile: '',
-    email: '',
-    password: '',
-    registrationSuccess: false,
-    errorMessage: '',
-  });
+function Register() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
 
-  const { name, mobile, email, password, registrationSuccess, errorMessage } = formData;
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await axios.post('authentication-7-production.up.railway.app', {
-        name,
-        mobile,
-        email,
-        password,
-      });
-
-      console.log(response.data);
-      setFormData({ ...formData, registrationSuccess: true });
-    } catch (error) {
-      console.error('Error registering user:', error);
-      setFormData({
-        ...formData,
-        errorMessage: 'User already exists. Please use a different email.',
-      });
-    }
-  };
-
-  const handleGoogleLogin = () => {
-    // Perform Google login integration
-  };
+  const register = () => {
+    if (!name) alert("Please enter name");
+    registerWithEmailAndPassword(name, email, password);
+  }; 
 
   const handleFacebookLogin = () => {
-    // Perform Facebook login integration
-  };
 
-  const handleLinkedInLogin = () => {
-    // Perform LinkedIn login integration
-  };
+  }
+
+  useEffect(() => {
+    if (loading) return;
+    if (user) navigate("/");
+  }, [user, loading]);
 
   return (
-    <>
-      <div className='main-cont'>
-        <div className='sign-in-container'>
-          {registrationSuccess ? (
-            <div className='success-message'>
-              <p>Registration Successful!</p>
-              <img
-                src='https://assets.ccbp.in/frontend/react-js/events-regestered-img.png'
-                alt='Success'
-                width='200'
-                height='200'
-              /> 
-             <p> <Link to='/login'>Login Here</Link></p>
-            </div>
-          ) : (
-            <>
-              <h2>Sign Up</h2>
-              <form onSubmit={handleSubmit} className='sign-in-form'>
-                <div className='form-group'>
-                  <label htmlFor='name'>Name</label>
-                  <input
-                    type='text'
-                    id='name'
-                    name='name'
-                    value={name}
-                    placeholder='Enter your Name'
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className='form-group'>
-                  <label htmlFor='mobile'>Mobile number</label>
-                  <input
-                    type='text'
-                    id='mobile'
-                    name='mobile'
-                    placeholder='Enter your Mobile Number'
-                    value={mobile}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className='form-group'>
-                  <label htmlFor='email'>Email</label>
-                  <input
-                    type='email'
-                    id='email'
-                    name='email'
-                    placeholder='Enter your email'
-                    value={email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className='form-group'>
-                  <label htmlFor='password'>Password</label>
-                  <input
-                    type='password'
-                    id='password'
-                    name='password'
-                    placeholder='Create your own Password'
-                    value={password}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                {errorMessage && <p className='error-message'>{errorMessage}</p>}
-                <button id='sign-button' type='submit'>Sign Up</button>
-              </form>
-              <div className="existing-account">
-                <p>Already have an account? <Link to="/login">Log in</Link></p>
-              </div>
-              <div className='row-lines'>
+    <div className="register"> 
+      <div className="register__container"> 
+      <h1 className="signup-heading">Sign Up</h1>
+        <input
+          type="text"
+          className="register__textBox"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Full Name"
+        />
+        <input
+          type="text"
+          className="register__textBox"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="E-mail Address"
+        />
+        <input
+          type="password"
+          className="register__textBox"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+        />
+        <button className="register__btn" onClick={register}>
+          Sign Up
+        </button> 
+        <div className='row-lines'>
                   <hr width="120px" size="2"></hr> 
                   <p>OR</p>
                   <hr width="120px" size="2"></hr> 
 
                </div>
-              <div className='social-buttons'>
-                <button className='google-button' onClick={handleGoogleLogin}>
+        <div className='social-buttons'>
+                <button className='google-button'  onClick={signInWithGoogle}>
                   <img
                     src='https://res.cloudinary.com/ajaymedidhi7/image/upload/v1703231079/R.27fa9f7a7ce6789c74f3679be56786c8_yfkeia.jpg'
                     alt='Google Logo'
@@ -148,13 +79,14 @@ const SignUp = () => {
                   Continue with Facebook
                 </button>
                 
-              </div>
-            </>
-          )}
+        </div>
+
+        <div>
+          Already have an account? <Link to="/login">Login</Link> now.
         </div>
       </div>
-    </>
+    </div>
   );
-};
+}
 
-export default SignUp;
+export default Register;

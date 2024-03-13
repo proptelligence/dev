@@ -241,3 +241,114 @@
 .cont-101{
   margin-top: 20px;
 }
+
+.wrap-cont {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap-cont {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.technology-container {
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.main-heading {
+  margin-top: 30px;
+  font-size: 2em;
+}
+
+.sub-heading {
+  margin-bottom: 20px;
+  color: #666;
+  text-align: center;
+}
+
+.tech-sections {
+  width: 90%; /* Adjust width for responsiveness */
+  max-width: 500px; /* Maximum width for larger screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.tech-image {
+  width: 100%; /* Ensure image fills its container */
+  max-width: 400px; /* Limit image size for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+ 
+.tech-image-3{
+ 
+  max-width: 400px; /* Limit image size for larger screens */
+  height: 300px; /* Maintain aspect ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.tech-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Additional styles... */
+
+/* List container */
+.animated-list-container {
+  margin-top: 20px;
+  text-align: center; /* Center list items */
+}
+
+.cont-101 {
+  margin-top: 20px;
+  text-align: left; /* Adjust text alignment */
+}
+
+.list-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  list-style: decimal;
+  text-align: left;
+}
+
+.list-item::before {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  background-color: #3498db;
+  color: white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Animation... */

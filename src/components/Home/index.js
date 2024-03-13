@@ -1,8 +1,6 @@
 import {Link} from 'react-router-dom'
 import Navbottom from '../Navbottom'
-
-import Tech from '../Tech'
-
+import YouTubeEmbed from '../YouTubeEmbed';
 import Navbar from '../Navbar'
 import './index.css'
 const Home = () => { 
@@ -33,33 +31,7 @@ const Home = () => {
     return(
       <>
     <Navbar /> 
-    <div className="home-container">
-      <div className="home-content">
-        <h1 className="home-heading">
-           World's Leading Property Technology Startup
-        </h1>
-        <img
-          src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
-          alt="clothes to be noticed"
-          className="home-mobile-img"
-        />
-        <p className="home-description">
-          Unlock the power of property intelligence with Proptelligence! Our
-          innovative technologies are designed to help you get the most out of
-          your real estate investments. Get the insights you need to make
-          smarter decisions - with Proptelligence, the future of property is at
-          your fingertips!
-        </p>
-      </div>
-      <img
-        src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
-        alt="dresses to be noticed"
-        className="home-desktop-img"
-      />
-    </div>  
- 
-
-    <h1 className='city-heading'>Popular Cities</h1>
+   
     <div className="cities-container"> 
         {cities.map((city) => (
           <div
@@ -79,9 +51,62 @@ const Home = () => {
             <div className="city-text">{city}</div>
           </div>
         ))}
+    </div> 
+
+    <div className="home-container">
+      <div className="home-content">
+        <h1 className="home-heading">
+        Unlock Our Free Property Service
+        </h1>
+        <img
+          src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
+          alt="clothes to be noticed"
+          className="home-mobile-img"
+        />  
+      
+        <p className="home-description">
+        Experience effortless property management with Proptelligence. 
+        With our free services,
+         managing your properties has never been easier.
+        </p> 
+       <Link to="/signup">
+       <button className='button-sign'>Sign up For Free</button>
+       </Link>
       </div>
+      <img
+        src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
+        alt="dresses to be noticed"
+        className="home-desktop-img"
+      />
+    </div>  
+
+    <div>
+    <h2 className="service-heading">Industries</h2> 
+    <div className="home-page">
+     
+     <div className="industries-row">
+       <div className="industry-item">
+         <img src="https://static.wixstatic.com/media/a3c153_749eb800f1a64c549de4e7acff06d1bb~mv2.jpg/v1/crop/x_936,y_0,w_3744,h_3744/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/alex-mNJ7c7-XCZQ-unsplash.jpg" alt="Real Estate" />
+         <p id='indus-des'>Real Estate / Prop Tech</p>
+       </div>
+       <div className="industry-item">
+         <img src="https://static.wixstatic.com/media/11062b_ddb09609a7b04f8f9a9c7cf1ee5d126c~mv2.jpeg/v1/crop/x_816,y_0,w_3264,h_3264/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Reviewing%20Legal%20Agreement.jpeg" alt="Legal" />
+         <p id='indus-des'>Legal Tech</p>
+       </div>
+       <div className="industry-item">
+         <img src="https://static.wixstatic.com/media/11062b_be6d973aaa1748aca87d52fbd1af37f0~mv2.jpg/v1/crop/x_1216,y_0,w_3126,h_3126/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Building%20Robot.jpg" alt="Education" />
+         <p id='indus-des'>Edu Tech</p>
+       </div>
+       <div className="industry-item">
+         <img src="https://static.wixstatic.com/media/11062b_89d64fe6a4e346ee80847d38a9e4c991~mv2.jpg/v1/crop/x_834,y_0,w_3333,h_3333/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Agriculture%20Drone.jpg" alt="Agri Tech" />
+         <p id='indus-des'>Agri Tech</p>
+       </div>
+     </div>
+   </div>
+    </div>
     
-    <Tech/>
+    
+
     <div className="service-section">
       <h2 className="service-heading">Our Services</h2>
       <div className="services-container">
@@ -93,8 +118,16 @@ const Home = () => {
               className="service-image"
             />
           </Link>
-          <h1 className='heading-2'>Property Management Services</h1>
-          <p className='des-1'>Efficient Solutions for Real Estate Management</p>
+          <h1 className='heading-2'>Property Services</h1>
+          <p className="prop-text-service-description">
+        At Proptelligence, we recognize the challenges faced by property owners and strive to provide innovative solutions tailored 
+        to their needs. 
+        That's why we provide free property management services, setting us apart from traditional 
+        agencies. Our holistic approach encompasses every aspect of property service management, from
+         tenant acquisition to maintenance and repair. With Proptelligence, you can rest assured that
+          your investments are in capable hands.
+
+        </p>
         </div>
         <div className="service-item">
           <Link to="/legalservices">
@@ -106,10 +139,40 @@ const Home = () => {
             </Link>
           
           <h1 className='heading-2'>Legal Services</h1>
-          <p className='des-1'> Expert Legal Guidance for Seamless Real Estate Transactions</p>
+          <p className="prop-text-service-description">
+          Navigating the legal complexities of real estate transactions can be daunting. Proptelligence simplifies this process by offering tailored legal services to meet your needs. Our team of experienced legal professionals provides online legal advice and assistance, ensuring seamless transactions and compliance with legal regulations. Whether you're buying, selling, or leasing property, trust Proptelligence for reliable legal services in India and beyond.
+        </p>
         </div>
       </div>
-    </div> 
+
+
+     
+      <div class="gallery-container">
+  <div class="container-photo">
+    <div class="header-photo">
+      <h1>Photo Gallery</h1>
+      <h2>View All</h2>
+    </div>
+    <div class="photo-container">
+      <img class='img-2' src="https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge_1258-150765.jpg" alt="Gallery" />
+    </div>
+  </div>
+  <div class="container-video">
+    <div class="header-video">
+      <h1>Video Gallery</h1>
+      <h2>View All</h2>
+    </div>
+    <div class="video-container">
+      <YouTubeEmbed embedId="sA5wHmkAQB8" />
+    </div>
+  </div>
+      </div>
+
+
+    </div>   
+
+    
+   
     <footer>
       
       <Navbottom/>

@@ -24,9 +24,6 @@ const PaymentGateway = () => {
       <div className='payment-gate-cont'>
         <div className="payment-container">
           <h1 id='payment-heading'>Payment Gateway</h1>
-          <p id='pay-des'>
-            Securely make payments for legal services using our trusted payment gateway. Your transactions are encrypted and protected, ensuring confidentiality and peace of mind.
-          </p>
           <div className="payment-form">
             <h2>Make a Payment</h2>
             <form>

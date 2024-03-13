@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from '../Navbar';
+import Navbar from '../Navbar'; 
+import Footer from '../Footer';
 import './index.css';
 
 const Technology = () => {
@@ -23,7 +24,12 @@ const Technology = () => {
               />
             </div> 
             <div className="centered-content">
-                  <h2 >Artificial Intelligence</h2>
+                  <h2 >Artificial Intelligence</h2> 
+                  <p className="prop-text-service-description">
+  
+                  Harnessing the power of AI, Proptelligence offers an innovative platform that transforms real estate decision-making. <span>Read More</span>
+
+  </p>
                   <div classNmae="animated-list-container">
                   
                   <ul className='cont-101'>
@@ -46,7 +52,8 @@ const Technology = () => {
               <img
                 src="https://img.freepik.com/premium-photo/amazed-beautiful-caucasian-woman-using-virtual-reality-goggles-studio-modern-interactive-technology-studio_482257-45580.jpg"
                 alt="AI in Real Estate"
-              />
+              /> 
+              
             </div> 
             <div className="centered-content">
                   <h2>AR & VR</h2>
@@ -70,7 +77,7 @@ const Technology = () => {
          <div className="tech-sections">
             <div className="tech-image">
               <img
-                src="https://img.freepik.com/premium-vector/businessman-infographic-text-box-banner_42077-1314.jpg"
+                src="https://img.freepik.com/free-photo/man-clicking-icon-house_1134-149.jpg"
                 alt="AI in Real Estate"
               />
             </div> 
@@ -95,6 +102,7 @@ const Technology = () => {
 
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

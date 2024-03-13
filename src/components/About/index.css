@@ -49,9 +49,9 @@
   .cont-1 {
 
     height: 60vh;
-    height: 100vh;
+    height: 90vh;
     padding: 10px;
-    background-image: url("https://img.freepik.com/premium-vector/abstract-dark-blue-gradient-circles-background-vector-illustration_518299-622.jpg");
+    background-color: #03b2cb;
   }
 
   .about-cont{

@@ -1,0 +1,92 @@
+/* CSS for TermsAndConditions component */
+
+/* Container */
+.TermsAndConditions {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.TermsAndConditions h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.TermsAndConditions h2 {
+  font-size: 24px;
+  color: #555;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.TermsAndConditions p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Links */
+.TermsAndConditions a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.TermsAndConditions a:hover {
+  text-decoration: underline;
+}
+
+/* List */
+.TermsAndConditions ul {
+  margin-bottom: 15px;
+}
+
+.TermsAndConditions li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Note */
+.TermsAndConditions .note {
+  font-style: italic;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Button */
+.TermsAndConditions .button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.TermsAndConditions .button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .TermsAndConditions {
+    padding: 15px;
+  }
+  .TermsAndConditions h1 {
+    font-size: 24px;
+  }
+  .TermsAndConditions h2 {
+    font-size: 20px;
+  }
+  .TermsAndConditions p {
+    font-size: 14px;
+  }
+}

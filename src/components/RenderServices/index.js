@@ -12,7 +12,12 @@ const RenderServices = ({ selectedOption, selectedCity }) => {
   const [selectedLocalities, setSelectedLocalities] = useState([]);
   const [selectedPropertyTypes, setSelectedPropertyTypes] = useState([]);
   const [selectedBedrooms, setSelectedBedrooms] = useState([]);
-  const [selectedCommercialTypes, setSelectedCommercialTypes] = useState([]);
+  const [selectedCommercialTypes, setSelectedCommercialTypes] = useState([]); 
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleClick = () => {
+    setShowPopup(true);
+  };
 
   const handleSellClick = () => {
     setShowSellOptions(true);
@@ -258,9 +263,19 @@ const RenderServices = ({ selectedOption, selectedCity }) => {
               <button>3 BHK</button>
               <button>4+ BHK</button>
             </div> 
-              <Link to="/propertyForm">
-              <button type="button">Find Property                                                                                                                                       </button>
-              </Link>
+            <div>
+      {showPopup && (
+        <div className="popup-cont">
+          <p>Currently, there are no properties available at this location.</p>
+          <button onClick={() => setShowPopup(false)}>Close</button>
+        </div>
+      )}
+     
+        <button type="button" onClick={handleClick}>
+          Find Properties
+        </button>
+     
+    </div>
             
             </div>
           )}
@@ -320,9 +335,7 @@ const RenderServices = ({ selectedOption, selectedCity }) => {
       {/* Include buttons for other bedroom options */}
     </div>
 
-    <Link to="/propertyForm">
-      <button type="button">Find Properties</button>
-    </Link>
+    
   </div>
 )}
 

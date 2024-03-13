@@ -1,0 +1,68 @@
+/* Style for the container of the entire blog */
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for the headings */
+  .blog-main-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #323f4b;
+    text-decoration: none;
+  }
+  
+.blog-sub-heading {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #444; 
+    text-decoration: none;
+  }
+  
+  /* Style for the paragraphs */
+  .blog-des {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  /* Style for the property image */
+  .property-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the divs containing text */
+  .blog-container > div {
+    margin-bottom: 40px;
+  }
+  
+  /* Style for links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+ 
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 600px) {
+    .blog-container {
+      padding: 10px;
+    }
+    
+    .blog-main-heading {
+      font-size: 2rem;
+    }
+    
+    .blog-sub-heading {
+      font-size: 1.8rem;
+    }
+    
+    .blog-des {
+      font-size: 1rem;
+    }
+  }
+  

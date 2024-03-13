@@ -1,0 +1,62 @@
+.about-us-1 {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: white;
+   
+
+  }
+  
+  .about-us-1 h2 {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-1 p {
+    font-size: 16px;
+    color: #020d13;
+    font-weight: 45s0;
+    margin-bottom: 15px;
+  }
+  
+  /* Style for headings within the paragraphs */
+  .about-us-1 p:first-child {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .about-us-1 {
+      padding: 15px;
+      border-radius: 0;
+    }
+  
+    .about-us-1 h2 {
+      font-size: 1.5rem;
+    }
+  
+    .about-us-1 p {
+      font-size: 0.6rem;
+    }
+  }
+  
+  .cont-101 {
+
+    height: 60vh;
+    height: 100vh;
+    padding: 10px;
+   
+  }
+
+  .about-cont-1{
+    background-color: #e6f6ff;
+    padding: 25px;
+    max-width: 1100px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }

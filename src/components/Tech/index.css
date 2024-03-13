@@ -58,7 +58,7 @@
   
   .container-item {
     flex: 0 0 auto;
-    width: 34%; /* Adjust width as needed */
+    width: 31%; /* Adjust width as needed */
     scroll-snap-align: start; 
     
   }

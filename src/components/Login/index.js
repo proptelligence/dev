@@ -1,82 +1,83 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import './index.css';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import "./index.css";
 
-const Login = () => {
-  const [loginData, setLoginData] = useState({
-    username: '',
-    password: '',
-  });
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
 
-  const [error, setError] = useState('');
-
-  const { username, password } = loginData;
-
-  const handleChange = (e) => {
-    setLoginData({ ...loginData, [e.target.name]: e.target.value });
-  };
-
-  const handleLoginSuccess = (token) => {
-    localStorage.setItem('jwtToken', token); // Storing token in localStorage
-    // Redirect or perform any action after successful login
-    // For example, you could redirect to the home page here
-    window.location.href = '/';
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:3005/login', loginData);
-      const { data } = response;
-      
-      if (response.status === 200) {
-        handleLoginSuccess(data.jwt_token);
-      } else {
-        setError(data.error_msg || 'Invalid credentials. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error logging in:', error);
-      setError('Invalid credentials. Please try again.');
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
     }
-  };
+    if (user) navigate("/");
+  }, [user, loading]); 
+
+  const handleFacebookLogin = () => {
+
+  }
 
   return (
-    <>
-       <div className='logo-cont'>
-       <div className='login-container'>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="username">Username/Email</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={username}
-            onChange={handleChange}
-            placeholder="Enter your username or email"
-            required
-          />
+    <div className="login">
+      <div className="login__container"> 
+      <h1 className="login-heading">Login</h1>
+        <input
+          type="text"
+          className="login__textBox"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="E-mail Address"
+        />
+        <input
+          type="password"
+          className="login__textBox"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+        />
+        <button
+          className="login__btn"
+          onClick={() => logInWithEmailAndPassword(email, password)}
+        >
+          Login
+        </button> 
+        <div className='row-lines'>
+                  <hr width="120px" size="2"></hr> 
+                  <p>OR</p>
+                  <hr width="120px" size="2"></hr> 
+
+               </div>
+        <div className='social-buttons'>
+                <button className='google-button' onClick={signInWithGoogle}>
+                  <img
+                    src='https://res.cloudinary.com/ajaymedidhi7/image/upload/v1703231079/R.27fa9f7a7ce6789c74f3679be56786c8_yfkeia.jpg'
+                    alt='Google Logo'
+                  />
+                  Login with Google
+                </button>
+                <button className='facebook-button' onClick={handleFacebookLogin}>
+                  <img
+                    src='https://img.freepik.com/premium-photo/facebook-application-logo-3d-rendering-white-background_41204-6939.jpg'
+                    alt='Facebook Logo'
+                  />
+                   Login with Facebook
+                </button>
+                
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={password}
-            onChange={handleChange}
-            placeholder="Enter your password"
-            required
-          />
+        <div>
+          <Link to="/reset">Forgot Password</Link>
         </div>
-        {error && <div className="error-message">{error}</div>}
-        <button id='login-btn' type="submit">Login</button>
-      </form>
+        <p>
+          Don't have an account? <Link to="/signup">Sign up  </Link> now.
+        </p>
+      </div>
     </div>
-       </div>
-    </>
   );
-};
+}
 
 export default Login;

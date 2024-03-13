@@ -1,5 +1,3 @@
-// PropertyManagement.js
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaHandshake } from 'react-icons/fa';
@@ -63,27 +61,25 @@ const PropertyManagement = () => {
     '9-10L',
   ];
 
-
   const renderCategories = () => {
     if (selectedCity && showCategories) {
       return (
         <div className="categories">
           <button onClick={handleBack}>Back to Cities</button>
-         
           <div className="category-options">
-          <button
-            onClick={() => handleOptionChange('Residential')}
-            className={`category-button ${selectedOption === 'Residential' ? 'selected' : ''}`}
-          >
-            Residential
-          </button>
-          <button
-            onClick={() => handleOptionChange('Commercial')}
-            className={`category-button ${selectedOption === 'Commercial' ? 'selected' : ''}`}
-          >
-            Commercial
-          </button>
-        </div>
+            <button
+              onClick={() => handleOptionChange('Residential')}
+              className={`category-button ${selectedOption === 'Residential' ? 'selected' : ''}`}
+            >
+              Residential
+            </button>
+            <button
+              onClick={() => handleOptionChange('Commercial')}
+              className={`category-button ${selectedOption === 'Commercial' ? 'selected' : ''}`}
+            >
+              Commercial
+            </button>
+          </div>
           {selectedOption && (
             <div className="budget-filters">
               <h4>Budget </h4>
@@ -109,7 +105,6 @@ const PropertyManagement = () => {
   return (
     <div className="property-management-services">
       <div className="header">
-        <h2 className="pms-heading">Property Management Services</h2>
         <Link to="/post">
           <button >Post Property <span className="free-btn">Free</span></button>
         </Link>
@@ -121,7 +116,7 @@ const PropertyManagement = () => {
         {cities.map((city) => (
           <div
             key={city}
-            className="city-button"
+            className={`city-button ${selectedCity === city ? 'selected-city' : ''}`}
             onClick={() => handleCityChange(city)}
           >
             <div className="city-image">

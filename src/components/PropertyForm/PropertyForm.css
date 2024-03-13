@@ -1,0 +1,55 @@
+.custom-property-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .custom-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .custom-label {
+    margin-bottom: 5px;
+  }
+  
+  .custom-input,
+  .custom-textarea,
+  .custom-file-input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .custom-textarea {
+    resize: vertical;
+  }
+  
+  .custom-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .success-message {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .custom-property-form {
+      padding: 10px;
+    }
+  }
+  
